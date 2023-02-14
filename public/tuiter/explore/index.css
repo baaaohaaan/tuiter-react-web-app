@@ -1,97 +1,61 @@
-.wd-search-container {
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    border-radius: 16px;
+.row.override-bs {
+    margin: 10px;
 }
 
-.wd-search-input {
-    flex-grow: 1;
-    padding: 8px;
-    color: white;
-    background-color: darkgray;
+.btn-primary.override-bs {
+    border-radius: 20px;
+}
+
+i.fas.fa-cog.fa-2x {
+    color: dodgerblue;
+}
+
+.nav-tabs {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.list-group {
     border: none;
-    border-radius: 16px;
 }
 
-.wd-settings-link {
-    display: inline-block;
-    padding: 8px;
+.list-group-item.list-group-item-action {
+    border: none;
 }
 
-.wd-settings-icon {
-    height: 24px;
-    width: 24px;
+a.list-group-item-action.active {
+    color: black;
+    background-color: transparent;
+    font-weight: bold;
 }
 
-.wd-links-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+i.fas.fa-cog.fa-2x {
+    color: black;
 }
 
-.wd-link {
-    padding: 16px;
-    color: rgb(110, 118, 125);
-    font-size: 15px;
-    text-decoration: none;
+input.ps-5.form-control.rounded-pill {
+    background-color: lightgray;
 }
 
-.wd-highlighted {
-    color: rgb(29, 161, 242);
-    border-bottom: 2px solid rgb(29, 161, 242);
+a.nav-link.active {
+    color: black;
+    border: none;
+    font-weight: bold;
 }
 
-.wd-posts-container {
-    margin-top: 16px;
+a.nav-link.border-0 {
+    color: gray;
 }
 
-.wd-post {
-    margin-bottom: 16px;
+.list-group-item.override-challenge {
+    border: none;
+    background-color: lightgray;
 }
 
-.wd-post-topic {
-    color: rgb(110, 118, 125);
-    font-size: 13px;
-}
-
-.wd-post-title {
-    color: rgb(110, 118, 125);
-}
-
-.wd-post-tuits {
-    color: rgb(110, 118, 125);
-    font-size: 13px;
-}
-
-.wd-suggested-post {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.wd-post-title {
-    font-size: 16px;
-    color: rgb(47, 51, 54);
-    margin-right: 16px;
-}
-
-.wd-post-author {
-    font-size: 13px;
-    margin-right: 16px;
-}
-
-.wd-post-image-container {
-    display: flex;
-    align-items: center;
-}
-
-.wd-post-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 15%;
-}
-
-.wd-post-topic {
-    color: rgb(110, 118, 125);
+.btn-primary.override-bs.override-challenge {
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: black;
 }
