@@ -1,0 +1,158 @@
+.body-background-color{
+    background-color: black;
+}
+
+.title-font-size{
+    font-size: 20px;
+}
+.title-font-color{
+    color: white;
+}
+
+.handle-color{
+    color: lightgray;
+}
+
+.handle-font-size{
+    font-size: 13px;
+}
+
+
+.border-solid {
+    border-style: solid; }
+
+.border-thin {
+    border-width: 1px; }
+
+.border-color{
+    border-color: rgb(47, 51, 54);
+}
+
+.margin-top-left-bottom{
+    margin-left: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.border-no-top{
+    border-top: none;
+}
+
+.pos-relative-headshot{
+    position: relative;
+    left: 16px;
+    top: 12px;
+}
+
+.user-img-round{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.pos-relative-nudge-up-right {
+    position: relative;
+    top:-58px;
+    left: 72px;
+}
+
+.pos-relative-nudge-up-right-main-text {
+    position: relative;
+    bottom: 75px;
+    left: 76px;
+}
+
+.author-font-size{
+    font-size: 15px;
+}
+
+.border-bottom-only{
+    border-top: none;
+    border-left:none;
+    border-right:none;
+}
+
+.main-text-dimension{
+    width: 506px;
+}
+
+.main-text-margin{
+    margin-right: 16px;
+    margin-bottom: 12px;
+}
+
+.pos-lecture-img{
+    position: relative;
+    bottom: 75px;
+    left: 70px;
+}
+
+.margin-lecture-img{
+    margin-left: 12px;
+    border-radius: 50%;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.lecture-img-round{
+    width: 504px;
+    height: 264px;
+    border-radius: 10px;
+}
+
+.dimension-lecture{
+    width: 504px;
+}
+
+.rounded-corners-all-around{
+    border-radius: 10px
+}
+
+.border-top-only{
+    border-left:none;
+    border-right:none;
+    border-bottom: none;
+}
+
+.white-bold-title{
+    color: white;
+    font-weight: bold;
+}
+
+.white-light-title{
+    color: white;
+    font-weight: normal;
+}
+
+.text-padded{
+    padding: 12px;
+}
+
+.icon-color{
+    color: white;
+}
+
+.grid-row {
+    clear: both;
+}
+
+.grid-col-one-four-page {
+    width: 25%;
+    float: left;
+}
+
+.grid-margin-top{
+    margin-top: 12px;
+}
+
+.heart-font-color{
+    color: red;
+}
+
+.pos-icon{
+    position: relative;
+    left: 24px;
+    top: -35px;
+}

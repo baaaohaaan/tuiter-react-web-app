@@ -25,11 +25,11 @@ i.fas.fa-cog.fa-2x {
     border: none;
 }
 
-a.list-group-item-action.active {
-    color: black;
-    background-color: transparent;
-    font-weight: bold;
-}
+/*a.list-group-item-action.active {*/
+/*    color: black;*/
+/*    background-color: transparent;*/
+/*    font-weight: bold;*/
+/*}*/
 
 i.fas.fa-cog.fa-2x {
     color: black;
