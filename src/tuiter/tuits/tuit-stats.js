@@ -1,6 +1,6 @@
 import React from "react";
 
-const PostSummaryItem = (
+const TuitStats = (
     {
         post = {
             "_id": 123,
@@ -23,18 +23,20 @@ const PostSummaryItem = (
     }
 ) => {
     return(
-        <li className="list-group-item">
-            <div className="row">
-                <div className="col-10">
-                    <div>{post.userName} · {post.time}</div>
-                    <div className="fw-bolder">{post.topic}</div>
-                    <div>{post.title}</div>
-                </div>
-                <div className="col-2">
-                    <img width={70} className="float-end rounded-3" src={`/images/${post.headshot}`}/>
-                </div>
+        <div className="row mt-3">
+            <div className="col-3">
+                <i className="bi bi-chat" /> {post.replies}
             </div>
-        </li>
+            <div className="col-3">
+                <i className="bi bi-share col-3" /> {post.retuits}
+            </div>
+            <div className="col-3">
+                <i className={`${post.liked === true ? 'bi bi-heart-fill col-3' : 'bi bi-heart col-3'}`} style={{color: `${post.liked === true ? 'red' : ''}`}} /> {post.likes}
+            </div>
+            <div className="col-3">
+                <i className="bi bi-send col-3" />
+            </div>
+        </div>
     );
 };
-export default PostSummaryItem;
+export default TuitStats;

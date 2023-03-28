@@ -1,8 +1,11 @@
 import React from "react";
 import PostItem from "./post-item";
-import postsArray from "./posts.json";
+import {useSelector} from "react-redux";
 
 const PostList = () => {
+    // replaced by /tuits/tuit-list.js
+
+    const postsArray = useSelector(state => state.tuits)
     return (
         <ul className="list-group">
             {

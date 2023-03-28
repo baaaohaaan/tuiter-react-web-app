@@ -1,8 +1,9 @@
 import React from "react";
+import TuitStats from "./tuit-stats";
+import {useDispatch} from "react-redux";
+import {deleteTuit} from "../reducers/tuits-reducer";
 
-const PostItem = (
-    // replaced by /tuits/tuit-item.js
-
+const TuitItem = (
     {
         post = {
             "_id": 123,
@@ -24,31 +25,23 @@ const PostItem = (
         }
     }
 ) => {
+    const dispatch = useDispatch();
+    const deleteTuitHandler = (id) => {
+        dispatch(deleteTuit(id));
+    }
     return(
         <li className="list-group-item">
             <div className="row">
                 <div className="col-2">
-                    <img width={70} height={70} className="rounded-circle float-start" src={`/images/${post.headshot}`} alt="Avatar"/>
+                    <img width={70} height={70} className="rounded-circle float-start" src={`/images/${post.headshot}`} alt="avatar"/>
                 </div>
                 <div className="col-10">
+                    <i className="bi bi-x-lg float-end" onClick={() => deleteTuitHandler(post._id)}></i>
                     <div><p className="fw-bold">{post.userName} <i className="bi bi-patch-check-fill" style={{color:'dodgerblue'}}/> <span style={{color:'gray'}}>{post.handle} · {post.time}</span> <i className="bi bi-three-dots float-end"/> </p></div>
                     <div>{post.tuit}</div>
                     {hasImage(post)}
                     {hasLink(post)}
-                    <div className="row mt-3">
-                        <div className="col-3">
-                            <i className="bi bi-chat" /> {post.replies}
-                        </div>
-                        <div className="col-3">
-                            <i className="bi bi-share col-3" /> {post.retuits}
-                        </div>
-                        <div className="col-3">
-                            <i className={`${post.liked === true ? 'bi bi-heart-fill col-3' : 'bi bi-heart col-3'}`} style={{color: `${post.liked === true ? 'red' : ''}`}} /> {post.likes}
-                        </div>
-                        <div className="col-3">
-                            <i className="bi bi-send col-3" />
-                        </div>
-                    </div>
+                    <TuitStats key={post._id} post={post}/>
                 </div>
             </div>
         </li>
@@ -56,7 +49,7 @@ const PostItem = (
 };
 
 const hasLink = (post) => {
-    if (post.link != '') {
+    if (post.link !== '') {
         return (
             <div className="border-solid border-color border-thin border-top-only">
                 <hr/>
@@ -70,7 +63,7 @@ const hasLink = (post) => {
 };
 
 const hasImage = (post) => {
-    if (post.image != '') {
+    if (post.image !== '') {
         return (
             <div>
                 <img width="100%" className="rounded-3" src={`/images/${post.image}`} alt="post"/>
@@ -79,4 +72,4 @@ const hasImage = (post) => {
     }
 };
 
-export default PostItem;
+export default TuitItem;

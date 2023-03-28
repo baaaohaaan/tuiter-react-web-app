@@ -1,0 +1,11 @@
+.headshot-relative-pos {
+    top: 225px;
+    left: 25px;
+    z-index: 1;
+}
+
+.button-relative-pos {
+    top: 310px;
+    right: 25px;
+    z-index: 1;
+}

@@ -73,10 +73,10 @@ const NavigationSidebar = () => {
                 </Link>
 
                 {/*Profile*/}
-                <Link to="#" className={`d-xl-none list-group-item list-group-item-action ${active === 'profile'?'active':''}`}>
+                <Link to="/tuiter/profile" className={`d-xl-none list-group-item list-group-item-action ${active === 'profile'?'active':''}`}>
                     <i className="bi bi-person-fill"></i>
                 </Link>
-                <Link to="#" className={`d-none d-xl-block d-xxl-block list-group-item list-group-item-action ${active === 'profile'?'active':''}`}>
+                <Link to="/tuiter/profile" className={`d-none d-xl-block d-xxl-block list-group-item list-group-item-action ${active === 'profile'?'active':''}`}>
                     <i className="bi bi-person-fill"></i>
                     Profile
                 </Link>

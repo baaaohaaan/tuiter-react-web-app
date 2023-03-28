@@ -160,7 +160,7 @@ console.log(four);
 console.log(string3);
 
 // 2.7.6
-console.log('The Find Index Function')
+console.log('The Find TuitList Function')
 const fourIndex = numberArray1
     .findIndex(a => a === 4);
 const string3Index = stringArray1
