@@ -1,4 +1,6 @@
 import React from "react";
+import {useDispatch} from "react-redux";
+import {updateTuitThunk} from "../../services/tuits-thunks";
 
 const TuitStats = (
     {
@@ -22,6 +24,10 @@ const TuitStats = (
         }
     }
 ) => {
+    const dispatch = useDispatch();
+    const updateTuitHandler = (tuit) => {
+        dispatch(updateTuitThunk(tuit));
+    }
     return(
         <div className="row mt-3">
             <div className="col-3">
@@ -31,7 +37,7 @@ const TuitStats = (
                 <i className="bi bi-share col-3" /> {post.retuits}
             </div>
             <div className="col-3">
-                <i className={`${post.liked === true ? 'bi bi-heart-fill col-3' : 'bi bi-heart col-3'}`} style={{color: `${post.liked === true ? 'red' : ''}`}} /> {post.likes}
+                {postLikes(post, updateTuitHandler)}
             </div>
             <div className="col-3">
                 <i className="bi bi-send col-3" />
@@ -39,4 +45,38 @@ const TuitStats = (
         </div>
     );
 };
+
+const postLikes = (post, updateTuitHandler) => {
+    if (!post.liked) {
+        return (
+            <div>
+                <i className='bi bi-heart col-3'
+                   onClick={() =>
+                    updateTuitHandler({
+                        ...post,
+                        liked: true,
+                        likes: post.likes + 1
+                    })
+                   }
+                ></i> {post.likes}
+            </div>
+        );
+    } else {
+        return (
+            <div>
+                <i className='bi bi-heart-fill col-3'
+                   style={{color: 'red'}}
+                   onClick={() =>
+                       updateTuitHandler({
+                           ...post,
+                           liked: false,
+                           likes: post.likes - 1
+                       })
+                   }
+                ></i> {post.likes}
+            </div>
+        );
+    }
+};
+
 export default TuitStats;
