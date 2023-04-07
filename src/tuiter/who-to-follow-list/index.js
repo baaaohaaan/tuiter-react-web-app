@@ -11,9 +11,7 @@ const WhoToFollowList = () => {
             </li>
             {
                 whoArray.map(who =>
-                    <WhoToFollowListItem
-                        key={who._id}
-                        who={who}/>
+                    <WhoToFollowListItem key={who._id} who={who}/>
                 )
             }
         </ul>
